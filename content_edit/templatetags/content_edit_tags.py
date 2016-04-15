@@ -1,9 +1,11 @@
 from django import template
 from django.contrib.auth.models import AnonymousUser 
 try:
-    from django.contrib.sites.models import get_current_site
+    from django.contrib.sites.models import Site
+    from django.contrib.sites.managers import CurrentSiteManager
+    from django.contrib.sites.shortcuts import get_current_site
     site = True
-except:
+except ImportError:
     site = False
 
 
