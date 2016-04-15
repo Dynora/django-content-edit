@@ -7,7 +7,7 @@ import reversion
 from content_edit.models import CmsContent
 from content_edit.settings import *
 
-class CmsContentAdmin(reversion.VersionAdmin):
+class CmsContentAdmin(reversion.admin.VersionAdmin):
     list_display = ('name', 'site',)
     list_filter = ('site',)
     search_fields = ('name','content')
