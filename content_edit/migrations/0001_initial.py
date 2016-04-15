@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(primary_key=True, verbose_name='ID', auto_created=True, serialize=False)),
                 ('name', models.CharField(max_length=255, unique=True)),
                 ('content', ckeditor.fields.RichTextField(blank=True)),
-                ('site', models.ForeignKey(to='sites.Site')),
+                ('site', models.ForeignKey(to='sites.Site', null=True, blank=True)),
             ],
             managers=[
                 ('objects', django.db.models.manager.Manager()),

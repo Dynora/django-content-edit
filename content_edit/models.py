@@ -15,7 +15,7 @@ class CmsContent(models.Model):
     objects = models.Manager()
     if site:
         on_site = CurrentSiteManager()
-        site = models.ForeignKey(Site)
+        site = models.ForeignKey(Site, null=True, blank=True)
 
     def __unicode__(self):
         return self.name
